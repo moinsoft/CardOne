@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(45deg, orange, fuchsia);
+  background-attachment: fixed;
+}
+
+.container:hover .card {
+  filter: blur(2px);
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+.container .card:hover {
+  filter: blur(0);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.card {
+  width: 300px;
+  height: 420px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  clip-path: circle(180px at center 0);
+  text-align: center;
+}
+
+.circle__title {
+  color: #ffffff;
+  font-size: 4.5rem;
+  padding: 30px 0;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.content__description {
+  color: #666666;
+}
+
+.content__btn {
+  text-decoration: none;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 40px;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.card:nth-child(1) .circle,
+.card:nth-child(1) .content__btn {
+  background-color: blueviolet;
+}
+
+.card:nth-child(2) .circle,
+.card:nth-child(2) .content__btn {
+  background-color: crimson;
+}
+
+.card:nth-child(3) .circle,
+.card:nth-child(3) .content__btn {
+  background-color: orange;
+}
